@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Lecture Voice-to-Notes Generator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 50px;
+            background-color: #f0f4f8;
+        }
+        h1 {
+            color: #1a73e8;
+        }
+        form {
+            margin-top: 20px;
+            margin-bottom: 30px;
+        }
+        input[type="file"] {
+            padding: 10px;
+        }
+        button {
+            padding: 10px 20px;
+            background-color: #1a73e8;
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        button:hover {
+            background-color: #1558b0;
+        }
+        .transcript {
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 10px;
+            border: 1px solid #ddd;
+            white-space: pre-wrap;
+        }
+    </style>
+</head>
+<body>
+    <h1>Lecture Voice-to-Notes Generator</h1>
+
+    <form method="POST" enctype="multipart/form-data">
+        <label>Upload Lecture Audio:</label><br><br>
+        <input type="file" name="audio" accept=".mp3,.wav,.m4a" required>
+        <button type="submit">Upload & Transcribe</button>
+    </form>
+
+    <h2>Transcribed Text:</h2>
+    <div class="transcript">
+        {{ transcript }}
+    </div>
+</body>
+</html>

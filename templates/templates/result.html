@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Lecture Output</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<div class="container">
+    <h2>Lecture Transcript</h2>
+    <p>{{ transcript }}</p>
+
+    <h2>Summarized Notes</h2>
+    <p>{{ summary }}</p>
+
+    <a href="/">⬅ Go Back</a>
+</div>
+
+</body>
+</html>
